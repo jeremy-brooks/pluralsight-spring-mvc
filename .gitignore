@@ -112,7 +112,6 @@ hs_err_pid*
 
 # IntelliJ project files
 .idea
-*.iml
 out
 gen
 # Created by .ignore support plugin (hsz.mobi)
