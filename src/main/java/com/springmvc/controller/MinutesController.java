@@ -13,7 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MinutesController {
     @RequestMapping(value = "/addMinutes")
     public String addMinutes(@ModelAttribute ("exercise") Exercise exercise, Model model){
-        model.addAttribute("title", "Add minutes");
+        System.out.println(exercise.getMinutes());
+        return "redirect:addMoreMinutes.html";
+    }
+
+    @RequestMapping(value = "/addMoreMinutes")
+    public String addMoreMinutes(@ModelAttribute ("exercise") Exercise exercise, Model model){
+        System.out.println(exercise.getMinutes());
         return "addMinutes";
     }
 }
